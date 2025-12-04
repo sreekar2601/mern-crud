@@ -5,7 +5,9 @@ import mongoose from "mongoose";
 
 export const getNotes: RequestHandler = async (req, res, next) => {
   try {
-    console.log("hello");
+    console.log("fkjdvdfv");
+    const notes = await NoteModel.find().exec();
+    res.status(200).json(notes);
   } catch (error) {
     next(error);
   }
